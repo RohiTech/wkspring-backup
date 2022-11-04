@@ -2,4 +2,11 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="com.appsdeveloperblog.app.ws.ui.model.request.UserDetailsRequestModel"/>
+    <fullyQualifiedTypeName name="org.apache.tomcat.jni.Address"/>
+    <fullyQualifiedTypeName name="org.hibernate.mapping.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.appsdeveloperblog.app.ws.io.entity.UserEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.BeanUtils"/>
+    <fullyQualifiedTypeName name="com.appsdeveloperblog.app.ws.UserRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 </qualifiedTypeNameHistroy>
