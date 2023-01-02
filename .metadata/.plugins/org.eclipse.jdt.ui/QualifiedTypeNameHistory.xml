@@ -13,4 +13,6 @@
     <fullyQualifiedTypeName name="java.security.SecureRandom"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="com.appsdeveloperblog.app.ws.shared.Utils"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.springframework.security.web.SecurityFilterChain"/>
 </qualifiedTypeNameHistroy>
