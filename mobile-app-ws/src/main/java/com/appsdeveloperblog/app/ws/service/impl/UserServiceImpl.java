@@ -10,8 +10,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.appsdeveloperblog.app.ws.UserRepository;
 import com.appsdeveloperblog.app.ws.io.entity.UserEntity;
+import com.appsdeveloperblog.app.ws.io.repositories.UserRepository;
 import com.appsdeveloperblog.app.ws.service.UserService;
 import com.appsdeveloperblog.app.ws.shared.Utils;
 import com.appsdeveloperblog.app.ws.shared.dto.UserDto;
@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
 	public UserDto createUser(UserDto user) {
 		// TODO Auto-generated method stub
 		
-		if(userRepository.findUserByEmail(user.getEmail()) != null) throw new RuntimeException("Record already exists");
+		if(userRepository.findByEmail(user.getEmail()) != null) throw new RuntimeException("Record already exists");
 		
 		UserEntity userEntity = new UserEntity();
 		BeanUtils.copyProperties(user, userEntity);
@@ -48,11 +48,23 @@ public class UserServiceImpl implements UserService {
 		
 		return returnValue;
 	}
+	
+	@Override
+	public UserDto getUser(String email)
+	{
+		UserEntity userEntity = userRepository.findByEmail(email);
+		
+		if(userEntity == null) throw new UsernameNotFoundException(email);
+		
+		UserDto returnValue = new UserDto();
+		BeanUtils.copyProperties(userEntity, returnValue);
+		return returnValue;
+	}
 
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
-		UserEntity userEntity = userRepository.findUserByEmail(email);
+		UserEntity userEntity = userRepository.findByEmail(email);
 		
 		if(userEntity == null) throw new UsernameNotFoundException(email);
 		
