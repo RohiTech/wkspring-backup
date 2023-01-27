@@ -37,4 +37,5 @@
     <fullyQualifiedTypeName name="io.jsonwebtoken.Jwts"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.springframework.security.authentication.AuthenticationManager"/>
+    <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
 </qualifiedTypeNameHistroy>
