@@ -61,8 +61,7 @@ public class UserController {
 		return returnValue;
 	}
 	
-	@PutMapping
-	@PostMapping(path="/{id}",
+	@PutMapping(path="/{id}",
 			consumes= {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE},
 			produces= {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
 	public UserRest updateUser(@PathVariable String id, @RequestBody UserDetailsRequestModel userDetails)
