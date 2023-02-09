@@ -22,7 +22,6 @@
     <fullyQualifiedTypeName name="org.springframework.security.core.AuthenticationException"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="io.jsonwebtoken.SignatureAlgorithm"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="com.appsdeveloperblog.app.ws.security.SecurityConstants"/>
     <fullyQualifiedTypeName name="com.appsdeveloperblog.app.ws.security.AuthenticationFilter"/>
     <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter"/>
@@ -39,4 +38,7 @@
     <fullyQualifiedTypeName name="org.springframework.security.authentication.AuthenticationManager"/>
     <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
     <fullyQualifiedTypeName name="com.appsdeveloperblog.app.ws.ui.model.response.ErrorMessages"/>
+    <fullyQualifiedTypeName name="com.appsdeveloperblog.app.ws.ui.model.response.ErrorMessage"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
 </qualifiedTypeNameHistroy>
