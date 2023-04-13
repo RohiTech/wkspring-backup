@@ -105,4 +105,15 @@ public class UserServiceImpl implements UserService {
 		
 		return returnValue;
 	}
+
+	@Override
+	public void deleteUser(String userId) {
+		// TODO Auto-generated method stub
+		UserEntity userEntity = userRepository.findByUserId(userId);
+		
+		if(userEntity == null)
+			throw new UserServiceException(ErrorMessages.NO_RECORD_FOUND.getErrorMessage());
+		
+		userRepository.delete(userEntity);
+	}
 }

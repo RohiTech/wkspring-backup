@@ -87,6 +87,8 @@ public class UserController {
 		// returnValue.setOperationName("DELETE");
 		returnValue.setOperationName(RequestOperationName.DELETE.name());
 		
+		userService.deleteUser(id);
+		
 		returnValue.setOperationResult(RequestOperationStatus.SUCCESS.name());
 		// return "delete user was called";
 		return returnValue;
