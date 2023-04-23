@@ -80,7 +80,7 @@ public class UserServiceImpl implements UserService {
 		UserEntity userEntity = userRepository.findByUserId(userId);
 		
 		if(userEntity == null)
-			throw new UsernameNotFoundException(userId);
+			throw new UsernameNotFoundException("User with ID: " + userId + "not found");
 		
 		BeanUtils.copyProperties(userEntity, returnValue);
 		
