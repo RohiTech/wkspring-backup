@@ -127,9 +127,11 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		List<UserDto> returnValue = new ArrayList<>();
 		
-		Pageable pageableRequest = (Pageable) PageRequest.of(page, limit);
+		if(page>0) page = page - 1;
 		
-		Page<UserEntity> usersPage = (Page<UserEntity>) userRepository.findAll((Sort) pageableRequest);
+		PageRequest pageableRequest = PageRequest.of(page, limit);
+		
+		Page<UserEntity> usersPage = userRepository.findAll(pageableRequest);
 		List<UserEntity> users = usersPage.getContent();
 		
 		for(UserEntity userEntity : users) {

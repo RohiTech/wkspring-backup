@@ -99,16 +99,17 @@ public class UserController {
 	}
 	
 	@GetMapping(produces= {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
-	public List<UserRest> getUsers(@RequestParam(value="page", defaultValue="1") int page,
-			@RequestParam(value="limit", defaultValue="25") int limit)
+	public List<UserRest> getUsers(@RequestParam(value="page", defaultValue="0") int page,
+			@RequestParam(value="limit", defaultValue="2") int limit)
 	{
 		List<UserRest> returnValue = new ArrayList<>();
 		
-		List<UsersDto> users = userService.getUsers(page, limit);
+		List<UserDto> users = userService.getUsers(page, limit);
 		
 		for(UserDto userDto : users) {
 			UserRest userModel = new UserRest();
-			// BeanUtils.
+			BeanUtils.copyProperties(userDto, userModel);
+			returnValue.add(userModel);
 		}
 		
 		return returnValue;
